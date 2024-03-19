@@ -1,0 +1,12 @@
+spring:
+  data:
+    mongodb:
+      database: atm
+      port: 27017
+      host: localhost
+#      authentication-database: atm
+#      username: atm
+#      password: atmPass@123
+
+server:
+  port: 8080
