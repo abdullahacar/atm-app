@@ -1,4 +1,4 @@
-# A small ATM Console Application with State Design Pattern
+## A small ATM Console Application with State Design Pattern
 
 This is a very small ATM console application, and it simulates an ATM that we often use in our daily lives.
 
@@ -8,7 +8,7 @@ If your PIN is valid you are directed to a menu which displays some functionalit
 
 You make your choice and just follow the instructions.
 
-# Does this simulation solve a problem ?
+## Does this simulation solve a problem ?
 
 Yes, of course. When we think what kind of issues we confronted while using these machines, I guess we all will remember a time that ATM is out of cash.
 
@@ -20,36 +20,36 @@ The State type itself actually provides an interface for encapsulating the behav
 
 ![img.png](img.png)
 
-# State:
+## State:
 It is the interface where the behavior/event is defined, it can also be an abstract class.
 
-# ConcreteState:
+## ConcreteState:
 Implements the State interface, so different states occur.
 
-# Context: 
+## Context: 
 The object whose status will be monitored.
 
-# In this ATM simulation the states are :
+## In this ATM simulation the states are :
 
-1. InitialState
+##### 1. InitialState
 
-    ATM waits for you to insert a card or enter a card number
+    - ATM waits for you to insert a card or enter a card number
 
-2. CardNumberEnteredState
+##### 2. CardNumberEnteredState
     
-    When you inserted your card into ATM, a welcome message will be displayed and will want you to type you PIN.   
+    - When you inserted your card into ATM, a welcome message will be displayed and will want you to type you PIN.   
 
-3. LoggingInState
+##### 3. LoggingInState
     
-    After typing your PIN; ATM will make some validation with help of Server
+    - After typing your PIN; ATM will make some validation with help of Server
 
-4. LoggedInState
+##### 4. LoggedInState
     
-    If your PIN is valid, you will be able to access all the available functionalities of ATM    
+    - If your PIN is valid, you will be able to access all the available functionalities of ATM    
 
-5. DisplayTheCommandsState
+##### 5. DisplayTheCommandsState
  
-All the commands after the validation will be as follows :
+> All the commands after the validation will be as follows :
 
     1. ViewBalanceState
     2. WithDrawState
@@ -57,23 +57,23 @@ All the commands after the validation will be as follows :
     4. LogOutState
     5. ChangePinState
 
-6. ErrorState
+##### 6. ErrorState
     
-    If any error occurs during the operations, you will be informed by this state
+    - If any error occurs during the operations, you will be informed by this state
 
-# How to use ?
+## How to use ?
 
- Please be sure that the atm-server is up and running with a mongodb instance
+ `- Please be sure that the atm-server is up and running with a mongodb instance`
 
- It is presumed Mongo runs on port 27017 and server app on port 8080.
+ `- It is presumed Mongo runs on port 27017 and server app on port 8080.`
 
- If you have authentication on your DB, please edit the application.yaml under the resources folder of atm-server app
+ `- If you have authentication on your DB, please edit the application.yaml under the resources folder of atm-server app`
 
- atm-server app will crete a test record and its properties will be persisted always
+ `- atm-server app will crete a test record and its properties will be persisted always`
 
- if you change the server host and port in server app please do not forget to alter the values on config/AppSettings in the client app
+ `- If you change the server host and port in server app please do not forget to alter the values on config/AppSettings in the client app`
 
-# please use <1> for credit card number and <1234> for PIN for testing purpose
+> **Please use <1> for credit card number and <1234> for PIN for testing purpose**
 
 
 
