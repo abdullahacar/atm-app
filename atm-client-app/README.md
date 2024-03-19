@@ -33,19 +33,19 @@ The object whose status will be monitored.
 
 ##### 1. InitialState
 
-    - ATM waits for you to insert a card or enter a card number
+`ATM waits for you to insert a card or enter a card number.`
 
 ##### 2. CardNumberEnteredState
     
-    - When you inserted your card into ATM, a welcome message will be displayed and will want you to type you PIN.   
+`When you inserted your card into ATM, a welcome message will be displayed and will want you to type you PIN.`   
 
 ##### 3. LoggingInState
     
-    - After typing your PIN; ATM will make some validation with help of Server
+`After typing your PIN; ATM will make some validation with help of Server.`
 
 ##### 4. LoggedInState
     
-    - If your PIN is valid, you will be able to access all the available functionalities of ATM    
+`If your PIN is valid, you will be able to access all the available functionalities of ATM.`    
 
 ##### 5. DisplayTheCommandsState
  
@@ -59,19 +59,19 @@ The object whose status will be monitored.
 
 ##### 6. ErrorState
     
-    - If any error occurs during the operations, you will be informed by this state
+`If any error occurs during the operations, you will be informed by this state.`
 
 ## How to use ?
 
- `- Please be sure that the atm-server is up and running with a mongodb instance`
+ `- Please be sure that the atm-server is up and running with a mongodb instance.`
 
  `- It is presumed Mongo runs on port 27017 and server app on port 8080.`
 
  `- If you have authentication on your DB, please edit the application.yaml under the resources folder of atm-server app`
 
- `- atm-server app will crete a test record and its properties will be persisted always`
+ `- atm-server app will crete a test record and its properties will be persisted always.`
 
- `- If you change the server host and port in server app please do not forget to alter the values on config/AppSettings in the client app`
+ `- If you change the server host and port in server app please do not forget to alter the values on config/AppSettings in the client app.`
 
 > **Please use <1> for credit card number and <1234> for PIN for testing purpose**
 
